@@ -57,8 +57,8 @@ const AuthContextProvider = ({ children }) => {
       console.log(userCredendial);
     } catch (error) {
       console.log(error);
-      toastErrorNotify("Wrong email or password (React-Toastify)");
-      toastErrorNotify2("Wrong email or password(React Hot Toast)");
+      toastErrorNotify(error.message + "" + "(React-Toastify)");
+      toastErrorNotify2("Wrong email or password (React Hot Toast)");
     }
   };
 
@@ -71,7 +71,7 @@ const AuthContextProvider = ({ children }) => {
     } catch (error) {
       console.log(error);
       toastErrorNotify("Wrong email or password (React-Toastify)");
-      toastErrorNotify2("Wrong email or password(React Hot Toast)");
+      toastErrorNotify2(error.message + "" + "(React Hot Toast)");
     }
   };
   const logOut = () => {
@@ -88,9 +88,8 @@ const AuthContextProvider = ({ children }) => {
           JSON.stringify({ email, displayName, photoURL })
         );
       } else {
-        toastSuccessNotify("Logged out successfully (React-Toastify)");
         sessionStorage.clear();
-        // setCurrentUser(false);
+        setCurrentUser(false);
       }
     });
   };
@@ -100,7 +99,8 @@ const AuthContextProvider = ({ children }) => {
     signInWithPopup(auth, provider)
       .then((result) => {
         console.log(result);
-        toastSucessNotify2("Logged in successfully");
+        toastSuccessNotify("Logged in successfully (React-Toastify)");
+        toastSucessNotify2("Logged in successfully (React Hot Toast)");
         navigate(-1);
       })
       .catch((error) => {

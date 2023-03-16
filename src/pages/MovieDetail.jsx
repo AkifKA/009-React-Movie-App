@@ -27,14 +27,17 @@ const MovieDetail = () => {
   useEffect(() => {
     axios
       .get(movieDetailBaseUrl)
-      .then((res) =>
-        setMovieDetails(res.data).catch((err) => console.log(err))
-      );
+      .then((res) => setMovieDetails(res.data))
+      .catch((error) => {
+        console.log(error);
+      });
+
     axios
       .get(videoUrl)
-      .then((res) =>
-        setVideoKey(res.data.results[0].key).catch((err) => console.log(err))
-      );
+      .then((res) => setVideoKey(res.data.results[0].key))
+      .catch((error) => {
+        console.log(error);
+      });
   }, [movieDetailBaseUrl, videoUrl]);
 
   return (
