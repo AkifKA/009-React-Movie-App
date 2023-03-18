@@ -57,7 +57,7 @@ const AuthContextProvider = ({ children }) => {
       console.log(userCredendial);
     } catch (error) {
       console.log(error);
-      toastErrorNotify(error.message + "" + "(React-Toastify)");
+      toastErrorNotify(`${error.message} React-Toastify`);
       toastErrorNotify2("Wrong email or password (React Hot Toast)");
     }
   };
@@ -71,7 +71,7 @@ const AuthContextProvider = ({ children }) => {
     } catch (error) {
       console.log(error);
       toastErrorNotify("Wrong email or password (React-Toastify)");
-      toastErrorNotify2(error.message + "" + "(React Hot Toast)");
+      toastErrorNotify(`${error.message} React-Toastify`);
     }
   };
   const logOut = () => {

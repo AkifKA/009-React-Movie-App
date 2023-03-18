@@ -3,7 +3,7 @@ import { toast } from "react-hot-toast";
 export const toastWarnNotify2 = (msg) => {
   toast.swarn(msg, {
     duration: 5000,
-    position: "left-center",
+    position: "left-bottom",
     style: {
       border: "1px solid #713200",
       padding: "16px",
@@ -18,7 +18,7 @@ export const toastWarnNotify2 = (msg) => {
 export const toastSucessNotify2 = (msg) => {
   toast.success(msg, {
     duration: 5000,
-    position: "left-top",
+    position: "left-bottom",
     style: {
       border: "1px solid #713200",
       padding: "16px",
@@ -33,7 +33,7 @@ export const toastSucessNotify2 = (msg) => {
 export const toastErrorNotify2 = (msg) => {
   toast.error(msg, {
     duration: 5000,
-    position: "left-top",
+    position: "left-bottom",
     style: {
       border: "1px solid #713200",
       padding: "16px",
