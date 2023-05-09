@@ -28,25 +28,6 @@ SOLUTION
 ├── package.json
 ├── .env
 └── yarn.lock
-```
 
-![Project Snapshot](movie-app_structure.png)
 
-## Expected Outcome
-
-![Project Snapshot](movie-app.gif)
-
-## Objective
-
-Build a Movie App using ReactJS.
-
-### At the end of the project, following topics are to be covered;
-
-- HTML
-
-- CSS
-
-- JS
-
-- ReactJS
 
